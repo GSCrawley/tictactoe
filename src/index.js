@@ -143,6 +143,13 @@ function calculateWinner(squares) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
+  } 
+
+  for (let i=0; i< squares.length; i++) {
+    if (squares[i] === null) {
+      return null;
+    }
   }
-  return null;
+
+  return "It's a Draw!"
 }
